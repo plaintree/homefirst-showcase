@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useRouter } from "next/router";
-import { Flex, Box, Text, Icon } from "@chakra-ui/react";
+import { Flex, Box, Text, Icon, useColorMode } from "@chakra-ui/react";
 import { RiFilter2Line } from "react-icons/ri";
 import { GiDistraction } from "react-icons/gi";
 import SearchFilter from "../components/SearchFilter";
@@ -10,6 +10,7 @@ import { fetchApi, baseUrl } from "../utils/fetchApi";
 const Search = ({ properties }) => {
   const [toggleSearchFilter, setToggleSearchFilter] = useState(false);
   const router = useRouter();
+  const { colorMode } = useColorMode();
 
   const handleClickFilter = () =>
     setToggleSearchFilter((prevState) => !prevState);
@@ -18,7 +19,7 @@ const Search = ({ properties }) => {
     <Box>
       <Flex
         cursor='pointer'
-        bg='gray.100'
+        bg={colorMode === "light" ? "gray.100" : "gray.700"}
         borderColor='gray.700'
         borderBottom='1px'
         p='2'

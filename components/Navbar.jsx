@@ -9,6 +9,7 @@ import {
   Box,
   Spacer,
   useColorMode,
+  Text,
 } from "@chakra-ui/react";
 import {
   BiMenu,
@@ -22,11 +23,15 @@ import { BsSun, BsMoon } from "react-icons/bs";
 const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
-    <Flex p='2' borderBottom='1px' borderColor='gray.100'>
-      <Box fontSize='3xl' color='red.400' fontWeight='bold'>
-        <Link href='/' pl='3'>
+    <Flex p='2' borderBottom='1px' borderColor='gray.300'>
+      <Box
+        fontSize='4xl'
+        fontWeight='bold'
+        bgGradient='linear(to-l, #7928CA, #FF0080)'
+        bgClip='text'>
+        <Text as={Link} href='/'>
           HomeFirst
-        </Link>
+        </Text>
       </Box>
       <Spacer />
       <Box>

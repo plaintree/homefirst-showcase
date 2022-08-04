@@ -14,7 +14,7 @@ const LeftArrow = () => {
       <Icon
         as={FaRegArrowAltCircleLeft}
         onClick={() => scrollPrev()}
-        // disabled={isFirstItemVisible}
+        disabled={isFirstItemVisible}
         fontSize='2xl'
         cursor='pointer'
         d={["none", "none", "none", "block"]}
@@ -30,7 +30,7 @@ const RightArrow = () => {
       <Icon
         as={FaRegArrowAltCircleRight}
         onClick={() => scrollNext()}
-        // disabled={isLastItemVisible}
+        disabled={isLastItemVisible}
         fontSize='2xl'
         cursor='pointer'
         d={["none", "none", "none", "block"]}
@@ -41,16 +41,14 @@ const RightArrow = () => {
 
 const ImageScrollbar = ({ data }) => {
   return (
-    <ScrollMenu
-      LeftArrow={LeftArrow}
-      RightArrow={RightArrow}
-      style={{ overflow: "hidden" }}>
+    <ScrollMenu>
       {data.map((photo) => (
-        <Box w={1000} itemID={photo.id} key={photo.id} overflow='hidden' p='1'>
+        <Box w={1000} itemID={photo.id} key={photo.id} p='1'>
           <Image
             placeholder='blur'
             blurDataURL={photo.url}
             src={photo.url}
+            layout='responsive'
             width={1000}
             height={500}
             sizes='(max-width:500px) 100px, (max-width: 1024px) 400px, 1000px'

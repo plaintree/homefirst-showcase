@@ -9,6 +9,7 @@ import {
   Spinner,
   Button,
   CloseButton,
+  useColorMode,
 } from "@chakra-ui/react";
 import { MdTimer } from "react-icons/md";
 import { useRouter } from "next/router";
@@ -22,6 +23,7 @@ const SearchFilter = () => {
   const [locationData, setLocationData] = useState();
   const [searchField, setSearchField] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const { colorMode } = useColorMode();
 
   useEffect(() => {
     if (searchField !== "") {
@@ -49,7 +51,11 @@ const SearchFilter = () => {
     router.push({ pathname, query });
   };
   return (
-    <Flex bg='gray.100' p='4' wrap='wrap' justify='center'>
+    <Flex
+      bg={colorMode === "light" ? "gray.100" : "gray.700"}
+      p='4'
+      wrap='wrap'
+      justify='center'>
       {filters.map((filter) => {
         const handleChange = (e) =>
           searchProperties({ [filter.queryName]: e.target.value });

@@ -8,6 +8,7 @@ import {
   Icon,
   Wrap,
   WrapItem,
+  useColorMode,
 } from "@chakra-ui/react";
 import {
   FaBed,
@@ -40,8 +41,9 @@ const PropertyDetail = ({ propertyDetails }) => {
     photos,
     purpose,
   } = propertyDetails;
+  const { colorMode } = useColorMode();
   return (
-    <Box maxW={1000} m='auto' p='4'>
+    <Box maxW='7xl' m='auto' p='4'>
       {photos && <ImageScrollbar data={photos} />}
       <Box w='full' p='6'>
         <Flex pt='2' align='center' justify='space-between'>
@@ -67,7 +69,7 @@ const PropertyDetail = ({ propertyDetails }) => {
         <Flex
           p='1'
           w={250}
-          color='blue.400'
+          color='yellow.500'
           align='center'
           justify='space-between'>
           <Icon as={FaBed} />
@@ -79,7 +81,7 @@ const PropertyDetail = ({ propertyDetails }) => {
           <Text fontSize='lg' mb='2' fontWeight='bold'>
             {title}
           </Text>
-          <Text lineHeight='2' color='gray.600'>
+          <Text lineHeight='2' fontSize='sm'>
             {description}
           </Text>
         </Box>
@@ -127,10 +129,10 @@ const PropertyDetail = ({ propertyDetails }) => {
                   <Text
                     key={subItem.text}
                     fontWeight='bold'
-                    color='blue.400'
+                    color={colorMode === "light" ? "red.400" : "red.500"}
                     fontSize='lg'
                     p='2'
-                    bg='gray.200'
+                    bg={colorMode === "light" ? "gray.100" : "gray.700"}
                     m='1'
                     borderRadius='5'>
                     {subItem.text}
