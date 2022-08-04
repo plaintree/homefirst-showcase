@@ -125,7 +125,7 @@ const PropertyDetail = ({ propertyDetails }) => {
           <Wrap>
             {amenities.map((item) =>
               item.amenities.map((subItem) => (
-                <WrapItem>
+                <WrapItem key={subItem.text}>
                   <Text
                     key={subItem.text}
                     fontWeight='bold'

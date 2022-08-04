@@ -45,7 +45,7 @@ const Search = ({ properties }) => {
         <Flex justify='center' align='center' flexDir='column' my='5'>
           <Icon as={GiDistraction} w={100} h={100} color='red.700' />
           <Text fontSize='2xl' mt='3'>
-            Oops, couldn't find any properties...
+            Oops, found no properties...
           </Text>
         </Flex>
       )}
