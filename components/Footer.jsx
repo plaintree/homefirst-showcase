@@ -8,7 +8,7 @@ const Footer = () => {
       color='gray.600'
       borderTop='1px'
       borderColor='gray.400'>
-      &copy; 2022 Realtor, Inc. Created by Ryan Lui.
+      &copy; 2022 HomeFirst, Inc. Created by Ryan Lui.
     </Box>
   );
 };

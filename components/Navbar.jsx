@@ -23,9 +23,9 @@ const Navbar = () => {
   const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex p='2' borderBottom='1px' borderColor='gray.100'>
-      <Box fontSize='3xl' color='blue.400' fontWeight='bold'>
-        <Link href='/' pl='2'>
-          Realtor
+      <Box fontSize='3xl' color='red.400' fontWeight='bold'>
+        <Link href='/' pl='3'>
+          HomeFirst
         </Link>
       </Box>
       <Spacer />

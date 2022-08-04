@@ -17,7 +17,7 @@ const Banner = ({
   <Flex wrap='wrap' justify='center' align='center' m='10'>
     <Image src={imageUrl} width={500} height={300} alt='banner' />
     <Box p='5'>
-      <Text color='gray.500' fontSize='small' fontWeight='medium'>
+      <Text color='gray.400' fontSize='small' fontWeight='medium'>
         {purpose}
       </Text>
       <Text fontSize='3xl' fontWeight='bold'>
@@ -25,12 +25,12 @@ const Banner = ({
         <br />
         {title2}
       </Text>
-      <Text color='gray.700' fontSize='lg' fontWeight='medium' py={3}>
+      <Text color='gray.500' fontSize='lg' fontWeight='medium' py={3}>
         {desc1}
         <br />
         {desc2}
       </Text>
-      <Button fontSize='xl' bg='blue.300' color='white'>
+      <Button fontSize='xl' bg='red.500' color='white'>
         <Link href={linkName}>{buttonText}</Link>
       </Button>
     </Box>

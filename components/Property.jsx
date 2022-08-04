@@ -67,7 +67,7 @@ const Property = ({
           <Flex
             p='1'
             w={250}
-            color='blue.400'
+            color='yellow.500'
             align='center'
             justify='space-between'>
             <Icon as={FaBed} />

@@ -7,9 +7,9 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Real Estate</title>
+        <title>HomeFirst</title>
       </Head>
-      <Box maxW={1280} m='auto'>
+      <Box maxW='7xl' m='auto'>
         <header>
           <Navbar />
         </header>
