@@ -8,6 +8,7 @@ import {
   Flex,
   Box,
   Spacer,
+  useColorMode,
 } from "@chakra-ui/react";
 import {
   BiMenu,
@@ -16,8 +17,10 @@ import {
   BiSearchAlt,
   BiKey,
 } from "react-icons/bi";
+import { BsSun, BsMoon } from "react-icons/bs";
 
 const Navbar = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   return (
     <Flex p='2' borderBottom='1px' borderColor='gray.100'>
       <Box fontSize='3xl' color='blue.400' fontWeight='bold'>
@@ -47,6 +50,11 @@ const Navbar = () => {
             <Link href='/search?purpose=for-rent' passHref>
               <MenuItem icon={<BiKey />}>Rent Property</MenuItem>
             </Link>
+            <MenuItem
+              icon={colorMode === "light" ? <BsMoon /> : <BsSun />}
+              onClick={toggleColorMode}>
+              {colorMode === "light" ? "Dark" : "Light"} Mode
+            </MenuItem>
           </MenuList>
         </Menu>
       </Box>

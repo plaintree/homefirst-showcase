@@ -1,10 +1,12 @@
 import { useEffect } from "react";
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import NProgress from "nprogress";
+
 import "../styles/nprogress.css";
 import "../styles/globals.css";
 import Layout from "../components/Layout";
+import theme from "../utils/theme";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -22,7 +24,7 @@ function MyApp({ Component, pageProps }) {
   }, []);
   return (
     <>
-      <ChakraProvider>
+      <ChakraProvider theme={theme}>
         <Layout>
           <Component {...pageProps} />
         </Layout>
