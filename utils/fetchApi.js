@@ -3,7 +3,7 @@ import axios from "axios";
 export const baseUrl = "https://bayut.p.rapidapi.com";
 
 const apiHeaders = {
-  "X-RapidAPI-Key": "4e46caff70msh5513230aad3a98dp16e1dfjsn64318a994ae2",
+  "X-RapidAPI-Key": process.env.NEXT_PUBLIC_RAPID_API_KEY,
   "X-RapidAPI-Host": "bayut.p.rapidapi.com",
 };
 
